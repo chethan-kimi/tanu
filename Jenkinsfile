@@ -14,5 +14,14 @@ pipeline{
                 echo 'Testing the App'
             }
         }
+        stage('Deploy for production'){
+            when{
+                branch 'production'
+            }
+            steps{
+                input message: 'Is test successful?'
+                echo 'Test is successful and proceeding for production'
+            }
+        }
     }
 }
