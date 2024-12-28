@@ -9,5 +9,10 @@ pipeline{
                 echo 'Building the app'
             }
         }
+        stage('test'){
+            step{
+                echo 'Testing the App'
+            }
+        }
     }
 }
